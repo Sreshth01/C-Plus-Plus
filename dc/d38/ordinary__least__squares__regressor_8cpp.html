@@ -225,7 +225,7 @@ template&lt;typename T &gt; </div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d38/ordinary__least__squares__regressor_8cpp_a38ff1d954e9b7de93eb20e2dd101a045_cgraph.svg" width="467" height="215"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d38/ordinary__least__squares__regressor_8cpp_a38ff1d954e9b7de93eb20e2dd101a045_cgraph.svg" width="467" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -253,18 +253,18 @@ template&lt;typename T &gt; </div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="comment">// Assuming A is square matrix</span></div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordtype">size_t</span> N = A.<a class="codeRef" target="_blank" href="http://en.cppreference.com/w/cpp/container/vector/size.html">size</a>();</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="codeRef" target="_blank" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;std::vector&lt;float&gt;</a>&gt; inverse(N);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="codeRef" target="_blank" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;std::vector&lt;float&gt;</a>&gt; <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>(N);</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> row = 0; row &lt; N; row++) {</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="comment">// preallocatae a resultant identity matrix</span></div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        inverse[row] = <a class="codeRef" target="_blank" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;float&gt;</a>(N);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row] = <a class="codeRef" target="_blank" href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector&lt;float&gt;</a>(N);</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> col = 0; col &lt; N; col++) {</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            inverse[row][col] = (row == col) ? 1.f : 0.f;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row][col] = (row == col) ? 1.f : 0.f;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        }</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../dc/d38/ordinary__least__squares__regressor_8cpp.html#a4921874435266592b222e3f2eda0e01f">is_square</a>(A)) {</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <a class="codeRef" target="_blank" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cerr</a> &lt;&lt; <span class="stringliteral">&quot;A must be a square matrix!&quot;</span> &lt;&lt; <a class="codeRef" target="_blank" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">return</span> inverse;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">// preallocatae a temporary matrix identical to A</span></div>
@@ -282,27 +282,27 @@ template&lt;typename T &gt; </div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> row2 = row; row2 &lt; N &amp;&amp; temp[row][row] == 0; row2++) {</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="comment">// this to ensure diagonal elements are not 0</span></div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            temp[row] = temp[row] + temp[row2];</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            inverse[row] = inverse[row] + inverse[row2];</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row] = <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row] + <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row2];</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        }</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> col2 = row; col2 &lt; N &amp;&amp; temp[row][row] == 0; col2++) {</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="comment">// this to further ensure diagonal elements are not 0</span></div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> row2 = 0; row2 &lt; N; row2++) {</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                temp[row2][row] = temp[row2][row] + temp[row2][col2];</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                inverse[row2][row] = inverse[row2][row] + inverse[row2][col2];</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row2][row] = <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row2][row] + <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row2][col2];</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            }</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        }</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keywordflow">if</span> (temp[row][row] == 0) {</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <span class="comment">// Probably a low-rank matrix and hence singular</span></div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            <a class="codeRef" target="_blank" href="http://en.cppreference.com/w/cpp/io/basic_ostream.html">std::cerr</a> &lt;&lt; <span class="stringliteral">&quot;Low-rank matrix, no inverse!&quot;</span> &lt;&lt; <a class="codeRef" target="_blank" href="http://en.cppreference.com/w/cpp/io/manip/endl.html">std::endl</a>;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">return</span> inverse;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>;</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        }</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="comment">// set diagonal to 1</span></div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keyword">auto</span> divisor = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(temp[row][row]);</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        temp[row] = temp[row] / divisor;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        inverse[row] = inverse[row] / divisor;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row] = <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row] / divisor;</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="comment">// Row transformations</span></div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> row2 = 0; row2 &lt; N; row2++) {</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">if</span> (row2 == row) {</div>
@@ -310,16 +310,16 @@ template&lt;typename T &gt; </div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            }</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <span class="keywordtype">float</span> factor = temp[row2][row];</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            temp[row2] = temp[row2] - factor * temp[row];</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            inverse[row2] = inverse[row2] - factor * inverse[row];</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row2] = <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row2] - factor * <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>[row];</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        }</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">return</span> inverse;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a>;</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d38/ordinary__least__squares__regressor_8cpp_a98ab8f75d981088369b89b8be2182483_cgraph.svg" width="227" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../dc/d38/ordinary__least__squares__regressor_8cpp_a98ab8f75d981088369b89b8be2182483_cgraph.svg" width="227" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -468,7 +468,7 @@ template&lt;typename T &gt; </div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dc/d38/ordinary__least__squares__regressor_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="100%" height="532"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../dc/d38/ordinary__least__squares__regressor_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="100%" height="551"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -1048,6 +1048,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="an_cr__mod__p_8cpp_html_a104a2b4b259b43a008a456e3aa54cdce"><div class="ttname"><a href="../../dc/d0a/n_cr__mod__p_8cpp.html#a104a2b4b259b43a008a456e3aa54cdce">inverse</a></div><div class="ttdeci">int64_t inverse(int64_t i, int64_t m)</div><div class="ttdef"><b>Definition:</b> nCr_mod_p.cpp:18</div></div>
 <div class="ttc" id="avector_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/container/vector.html">std::vector</a></div><div class="ttdoc">STL class.</div></div>
 <div class="ttc" id="asize_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/container/vector/size.html">std::vector::size</a></div><div class="ttdeci">T size(T... args)</div></div>
 <div class="ttc" id="asetfill_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/io/manip/setfill.html">std::setfill</a></div><div class="ttdeci">T setfill(T... args)</div></div>

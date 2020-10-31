@@ -26,6 +26,7 @@ var dir_296d53ceaeaa7e099814a6def439fe8a =
     [ "magic_number.cpp", "d9/d44/magic__number_8cpp.html", "d9/d44/magic__number_8cpp" ],
     [ "miller_rabin.cpp", "d6/d42/miller__rabin_8cpp.html", "d6/d42/miller__rabin_8cpp" ],
     [ "modular_inverse_fermat_little_theorem.cpp", "d8/d53/modular__inverse__fermat__little__theorem_8cpp.html", "d8/d53/modular__inverse__fermat__little__theorem_8cpp" ],
+    [ "nCr_mod_p.cpp", "dc/d0a/n_cr__mod__p_8cpp.html", "dc/d0a/n_cr__mod__p_8cpp" ],
     [ "number_of_positive_divisors.cpp", "d0/da2/number__of__positive__divisors_8cpp.html", "d0/da2/number__of__positive__divisors_8cpp" ],
     [ "power_for_huge_numbers.cpp", "df/def/power__for__huge__numbers_8cpp.html", "df/def/power__for__huge__numbers_8cpp" ],
     [ "prime_factorization.cpp", "db/d0d/prime__factorization_8cpp.html", "db/d0d/prime__factorization_8cpp" ],
